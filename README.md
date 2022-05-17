@@ -5,3 +5,5 @@ Esse projeto visa praticar atividades da disciplina de gestão e qualidade de so
 Esse é o repositório base, que serve de exemplo para os próximos. 
 
 Nova de novo
+
+Mudando...
