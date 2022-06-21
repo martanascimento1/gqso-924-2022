@@ -15,7 +15,7 @@ public class Server {
         HttpServer server = HttpServer.create(bindAddr, TAMANHO_BACKLOG);
         server.setExecutor(Executors.newSingleThreadExecutor());
 
-        //server.createContext(IndexHandler.PATH, new IndexHandler());
+        
         server.createContext(CalcSoma.PATH, new CalcSoma());
         server.createContext(Divisao.PATH, new Divisao());
         // server.createContext(.PATH, new );
