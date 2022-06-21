@@ -25,3 +25,5 @@ public class Server {
 
         server.start();
         System.out.printf("Servidor ouvindo requisições na porta %s\n\n", server.getAddress().getPort());
+    }
+}    
