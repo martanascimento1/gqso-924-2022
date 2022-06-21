@@ -8,21 +8,25 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
 public class Subtracao implements HttpHandler {
-    public static final String PATH = "/sub";
 
+    public static final String PATH = "/sub";
+    
     @Override
     public void handle(HttpExchange conn) throws IOException {
+
         String[] partes = conn.getRequestURI().getPath().split("/");
 
-        String parametro = partes[3];
-        String parametro1 = partes[4];
-        byte[] result = calculateResponse(parametro, parametro1);
+        String operador1 = partes[2]; // partes[2] = primeiro número digitado para somar
+        String operador2 = partes[3]; // parte [3] = segundo número digitado para somar
+
+        byte[] result = calculateResponse(operador1, operador2);
 
         try {
-        
             conn.sendResponseHeaders(HTTP_OK, result.length);
+
             Headers headers = conn.getResponseHeaders();
             headers.add("Content-Type", "text/html; charset=UTF-8");
+
             try (OutputStream out = conn.getResponseBody()) {
                 out.write(result);
             } catch (IOException ioe) {
@@ -35,12 +39,13 @@ public class Subtracao implements HttpHandler {
         }
     }
 
-    byte[] calculateResponse(String parametro, String parametro1) {
-        double pDouble = Double.parseDouble(parametro);
-        double pDouble2 = Double.parseDouble(parametro1);
+    byte[] calculateResponse(String operador1, String operador2) {
 
-        double subtracao = (pDouble - pDouble2);
+        double numero1 = Double.parseDouble(operador1);
+        double numero2 = Double.parseDouble(operador2);
+
+        double subtracao = (numero1 - numero2);
 
         return Double.toString(subtracao).getBytes();
     }
-}    
+}
