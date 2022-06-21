@@ -10,7 +10,7 @@ import com.sun.net.httpserver.HttpHandler;
 public class CalcSoma implements HttpHandler {
 
     public static final String PATH = "/soma";
-
+    
     @Override
     public void handle(HttpExchange conn) throws IOException {
 
