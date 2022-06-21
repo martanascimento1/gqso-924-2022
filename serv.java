@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.util.concurrent.Executors;
 
-import com.sun.net.httpserver.HttpContext;
+//import com.sun.net.httpserver.HttpContext;
 import com.sun.net.httpserver.HttpServer;
 
 public class serv {
@@ -13,9 +13,12 @@ public class serv {
 
         InetSocketAddress bindAddr = new InetSocketAddress(3000);
         HttpServer server = HttpServer.create(bindAddr, TAMANHO_BACKLOG);
-        server.setExecutor(Executors.newSingleThreadExecutor());
 
+    
         server.createContext(Calcdiv.PATH, new Calcdiv());
+        // server.createContext(.PATH, new );
+        // server.createContext(.PATH, new );
+        // server.createContext(.PATH, new );
 
         server.start();
         System.out.printf("Servidor ouvindo requisições na porta %s\n\n", server.getAddress().getPort());
