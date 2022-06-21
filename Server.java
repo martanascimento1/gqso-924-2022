@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 
 import com.sun.net.httpserver.HttpServer;
 
-public class Servidor {
+public class Server {
 
     public static final int TAMANHO_BACKLOG = 100;
 
@@ -15,8 +15,9 @@ public class Servidor {
         HttpServer server = HttpServer.create(bindAddr, TAMANHO_BACKLOG);
         server.setExecutor(Executors.newSingleThreadExecutor());
 
-        server.createContext(IndexHandler.PATH, new IndexHandler());
+        //server.createContext(IndexHandler.PATH, new IndexHandler());
         server.createContext(CalcSoma.PATH, new CalcSoma());
+        server.createContext(Divisao.PATH, new Divisao());
         // server.createContext(.PATH, new );
         // server.createContext(.PATH, new );
         // server.createContext(.PATH, new );
