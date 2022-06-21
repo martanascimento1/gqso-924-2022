@@ -18,6 +18,7 @@ public class Server {
         
         server.createContext(CalcSoma.PATH, new CalcSoma());
         server.createContext(Divisao.PATH, new Divisao());
+        server.createContext(Subtracao.PATH, new Subtracao());
         // server.createContext(.PATH, new );
         // server.createContext(.PATH, new );
         // server.createContext(.PATH, new );
