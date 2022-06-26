@@ -1,29 +1,21 @@
-
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.util.concurrent.Executors;
-
 import com.sun.net.httpserver.HttpServer;
 
 public class Server {
-
     public static final int TAMANHO_BACKLOG = 100;
-
     public static void main(String[] args) throws IOException {
 
         InetSocketAddress bindAddr = new InetSocketAddress(36615);
         HttpServer server = HttpServer.create(bindAddr, TAMANHO_BACKLOG);
         server.setExecutor(Executors.newSingleThreadExecutor());
-
         
         server.createContext(CalcSoma.PATH, new CalcSoma());
         server.createContext(Divisao.PATH, new Divisao());
         server.createContext(Subtracao.PATH, new Subtracao());
-        // server.createContext(.PATH, new );
-        // server.createContext(.PATH, new );
-        // server.createContext(.PATH, new );
-
-
+        server.createContext(CalcMult.PATH, new CalcMult());
+      
         server.start();
         System.out.printf("Servidor ouvindo requisições na porta %s\n\n", server.getAddress().getPort());
     }
