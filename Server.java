@@ -14,7 +14,7 @@ public class Server {
         server.createContext(CalcSoma.PATH, new CalcSoma());
         server.createContext(Divisao.PATH, new Divisao());
         server.createContext(Subtracao.PATH, new Subtracao());
-        server.createContext(CalcMult.PATH, new CalcMult());
+        server.createContext(multiplicacao.PATH, new multiplicacao());
       
         server.start();
         System.out.printf("Servidor ouvindo requisições na porta %s\n\n", server.getAddress().getPort());
