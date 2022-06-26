@@ -7,14 +7,14 @@ public class Server {
     public static final int TAMANHO_BACKLOG = 100;
     public static void main(String[] args) throws IOException {
 
-        InetSocketAddress bindAddr = new InetSocketAddress(36615);
+        InetSocketAddress bindAddr = new InetSocketAddress(3000);
         HttpServer server = HttpServer.create(bindAddr, TAMANHO_BACKLOG);
         server.setExecutor(Executors.newSingleThreadExecutor());
         
         server.createContext(CalcSoma.PATH, new CalcSoma());
         server.createContext(Divisao.PATH, new Divisao());
         server.createContext(Subtracao.PATH, new Subtracao());
-        server.createContext(multiplicacao.PATH, new multiplicacao());
+        server.createContext(Multiplicacao.PATH, new Multiplicacao());
       
         server.start();
         System.out.printf("Servidor ouvindo requisições na porta %s\n\n", server.getAddress().getPort());

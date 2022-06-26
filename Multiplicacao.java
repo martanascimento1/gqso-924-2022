@@ -5,14 +5,14 @@ import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
-public class Divisao implements HttpHandler {
-    public static final String PATH = "/div";
-    
+public class Multiplicacao implements HttpHandler {
+    public static final String PATH = "/mult";
+
     @Override
     public void handle(HttpExchange conn) throws IOException {
         String[] partes = conn.getRequestURI().getPath().split("/");
-        String operador1 = partes[2]; // partes[2] = primeiro número digitado para somar
-        String operador2 = partes[3]; // parte [3] = segundo número digitado para somar
+        String operador1 = partes[2]; // partes[2] = primeiro número digitado para multiplicar
+        String operador2 = partes[3]; // parte [3] = segundo número digitado para multiplicar
         byte[] result = calculateResponse(operador1, operador2);
 
         try {
@@ -30,17 +30,10 @@ public class Divisao implements HttpHandler {
             conn.close();
         }
     }
-    
     byte[] calculateResponse(String operador1, String operador2) {
         double numero1 = Double.parseDouble(operador1);
         double numero2 = Double.parseDouble(operador2);
-        double divisao = (numero1 / numero2);
-        if(numero2 == 0){
-            String div = "Não é possível dividir por zero.";
-            return div.getBytes();
-        }
-        else {
-            return Double.toString(divisao).getBytes();
-        }
+        double mult = (numero1 * numero2);
+        return Double.toString(mult).getBytes();
     }
 }
