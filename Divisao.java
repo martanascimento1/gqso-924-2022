@@ -4,7 +4,6 @@ import java.io.OutputStream;
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-
 public class Divisao implements HttpHandler {
     public static final String PATH = "/div";
     
