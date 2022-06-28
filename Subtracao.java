@@ -30,7 +30,6 @@ public class Subtracao implements HttpHandler {
             conn.close();
         }
     }
-
     byte[] calculateResponse(String operador1, String operador2) {
         double numero1 = Double.parseDouble(operador1);
         double numero2 = Double.parseDouble(operador2);
