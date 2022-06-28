@@ -4,16 +4,15 @@ import java.io.OutputStream;
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-
 public class Divisao implements HttpHandler {
     public static final String PATH = "/div";
     
     @Override
     public void handle(HttpExchange conn) throws IOException {
         String[] partes = conn.getRequestURI().getPath().split("/");
-        String operador1 = partes[2]; // partes[2] = primeiro número digitado para somar
-        String operador2 = partes[3]; // parte [3] = segundo número digitado para somar
-        byte[] result = calculateResponse(operador1, operador2);
+        String parametro1 = partes[2]; // partes[2] = primeiro número digitado para somar
+        String parametro2 = partes[3]; // parte [3] = segundo número digitado para somar
+        byte[] result = calculateResponse(parametro1, parametro2);
 
         try {
             conn.sendResponseHeaders(HTTP_OK, result.length);
