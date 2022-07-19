@@ -5,15 +5,16 @@ import io.jooby.annotations.Path;
 import io.jooby.annotations.PathParam;
 import io.jooby.exception.BadRequestException;
  
-@Path("/raiz/{op}")
-public class Raiz {
+@Path("/soma/{op1}/{op2}")
+public class Soma {
 
     @GET
-    public double calculaRaiz(@PathParam("op") String op) {
+    public double soma(@PathParam("op1") double op1, @PathParam("op2") double op2) {
         try {
-            return Math.sqrt(Double.parseDouble(op));
+            double resultado = op1 + op2;
+            return resultado;
         } catch (NumberFormatException nfe) {
-            throw new BadRequestException("Parâmetro inválido: " + op);
+            throw new BadRequestException("Parâmetros inválidos: " + op1);
         }
     }
 }
