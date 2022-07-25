@@ -23,7 +23,7 @@ public class IntegrationTest {
         .build();
 
     try (Response rsp = client.newCall(req).execute()) {
-      assertEquals("Chupa Javascript!", rsp.body().string());
+      assertEquals("Calculadora API", rsp.body().string());
       assertEquals(StatusCode.OK.value(), rsp.code());
     }
   }

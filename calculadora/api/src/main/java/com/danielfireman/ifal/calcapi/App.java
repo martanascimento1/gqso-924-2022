@@ -24,6 +24,10 @@ public class App extends Jooby {
     mvc(new Multiplicacao());
   }
 
+  {
+    get("/", ctx -> "Calculadora API");
+  }
+
 
   public static void main(final String[] args) {
     runApp(args, App::new);

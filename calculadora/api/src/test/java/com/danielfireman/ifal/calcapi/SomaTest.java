@@ -9,7 +9,7 @@ import io.jooby.MockRouter;
 import io.jooby.StatusCode;
 import io.jooby.exception.BadRequestException;
 
-public class RaizTest {
+public class SomaTest {
     @Test
     public void soma() {
         MockRouter router = new MockRouter(new App());
@@ -18,16 +18,7 @@ public class RaizTest {
             assertEquals(StatusCode.OK, rsp.getStatusCode());
         });
     }
-
-    @Test
-    public void somaDecimais() {
-        MockRouter router = new MockRouter(new App());
-        router.get("/soma/4.5/4.5", rsp -> {
-            assertEquals(9.0, rsp.value());
-            assertEquals(StatusCode.OK, rsp.getStatusCode());
-        });
-    }
-
+    
     @Test
     public void soma_operadorString() {
         MockRouter router = new MockRouter(new App());
