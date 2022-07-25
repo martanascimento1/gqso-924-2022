@@ -3,7 +3,7 @@ package com.danielfireman.ifal.calcapi;
 import io.jooby.Jooby;
 
 public class App extends Jooby {
-
+  
   {
     get("/", ctx -> "Calculadora de soma");
     mvc(new Soma());
@@ -24,6 +24,9 @@ public class App extends Jooby {
     mvc(new Multiplicacao());
   }
 
+  {
+    get("/", ctx -> "Calculadora API");
+  } 
 
   public static void main(final String[] args) {
     runApp(args, App::new);
