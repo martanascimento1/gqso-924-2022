@@ -11,6 +11,9 @@ public class Divisao {
     @GET
     public double divisao(@PathParam("op1") double op1, @PathParam("op2") double op2) {
         try {
+            if(op2==0){
+                throw new BadRequestException("Não pode dividir por zero ");
+            }
             double resultado = op1 / op2;
             return resultado;
         } catch (NumberFormatException nfe) {
