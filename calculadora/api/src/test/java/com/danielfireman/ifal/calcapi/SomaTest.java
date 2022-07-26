@@ -10,6 +10,10 @@ import io.jooby.StatusCode;
 import io.jooby.exception.BadRequestException;
 
 public class SomaTest {
+<<<<<<< HEAD
+=======
+    
+>>>>>>> main
     @Test
     public void soma() {
         MockRouter router = new MockRouter(new App());
@@ -18,7 +22,11 @@ public class SomaTest {
             assertEquals(StatusCode.OK, rsp.getStatusCode());
         });
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> main
     @Test
     public void soma_operadorString() {
         MockRouter router = new MockRouter(new App());
