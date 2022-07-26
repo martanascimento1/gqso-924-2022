@@ -1,9 +1,5 @@
 com/danielfireman/ifal/calcapi/IntegrationTest.class
-<<<<<<< HEAD
 com/danielfireman/ifal/calcapi/UnitTest.class
 com/danielfireman/ifal/calcapi/SomaTest.class
 com/danielfireman/ifal/calcapi/SubtracaoTest.class
-=======
-com/danielfireman/ifal/calcapi/SomaTest.class
-com/danielfireman/ifal/calcapi/UnitTest.class
->>>>>>> main
+com/danielfireman/ifal/calcapi/MultiplicacaoTest.class

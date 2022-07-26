@@ -9,21 +9,21 @@ import io.jooby.MockRouter;
 import io.jooby.StatusCode;
 import io.jooby.exception.BadRequestException;
 
-public class SomaTest {
+public class MultiplicacaoTest {
     @Test
-    public void soma() {
+    public void multiplicacao() {
         MockRouter router = new MockRouter(new App());
-        router.get("/soma/8/4", rsp -> {
-            assertEquals(12.0, rsp.value());
+        router.get("/mult/5/4", rsp -> {
+            assertEquals(20.0, rsp.value());
             assertEquals(StatusCode.OK, rsp.getStatusCode());
         });
     }
 
     @Test
-    public void soma_operadorString() {
+    public void multiplicacao_operadorString() {
         MockRouter router = new MockRouter(new App());
         assertThrows(BadRequestException.class, () ->{
-            router.get("/soma/a/a", rsp -> {});
+            router.get("/mult/a/a", rsp -> {});
         });
     }
 
@@ -31,7 +31,7 @@ public class SomaTest {
     public void operadorVirgula() {
         MockRouter router = new MockRouter(new App());
         assertThrows(BadRequestException.class, () ->{
-            router.get("/soma/2,5/2,5", rsp -> {});
+            router.get("/mult/2,5/2,5", rsp -> {});
         });
     }
 }

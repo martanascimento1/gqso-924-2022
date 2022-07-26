@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.danielfireman.ifal.calcapi.IntegrationTest" time="0.755" tests="1" errors="0" skipped="0" failures="0">
-=======
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.danielfireman.ifal.calcapi.IntegrationTest" time="1.407" tests="1" errors="0" skipped="0" failures="0">
->>>>>>> main
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.danielfireman.ifal.calcapi.IntegrationTest" time="0.863" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="jooby.useShutdownHook" value="false"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -21,11 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/home/gitpod/.sdkman/candidates/java/11.0.15.fx-zulu/lib"/>
-<<<<<<< HEAD
-    <property name="sun.java.command" value="/workspace/gqso-924-2022/calculadora/api/target/surefire/surefirebooter2602715780436222308.jar /workspace/gqso-924-2022/calculadora/api/target/surefire 2022-07-25T16-22-15_789-jvmRun1 surefire1418007564502912438tmp surefire_02107036739924266431tmp"/>
-=======
-    <property name="sun.java.command" value="/workspace/gqso-924-2022/calculadora/api/target/surefire/surefirebooter1147402679645080760.jar /workspace/gqso-924-2022/calculadora/api/target/surefire 2022-07-25T16-02-28_789-jvmRun1 surefire7181960862805929881tmp surefire_012296288151455174457tmp"/>
->>>>>>> main
+    <property name="sun.java.command" value="/workspace/gqso-924-2022/calculadora/api/target/surefire/surefirebooter2259136955799507425.jar /workspace/gqso-924-2022/calculadora/api/target/surefire 2022-07-26T16-21-15_118-jvmRun1 surefire2637535416289501889tmp surefire_011633524138193085356tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/workspace/gqso-924-2022/calculadora/api/target/test-classes:/workspace/gqso-924-2022/calculadora/api/target/classes:/workspace/m2-repository/io/jooby/jooby-netty/2.15.1/jooby-netty-2.15.1.jar:/workspace/m2-repository/io/jooby/jooby/2.15.1/jooby-2.15.1.jar:/workspace/m2-repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/workspace/m2-repository/javax/inject/javax.inject/1/javax.inject-1.jar:/workspace/m2-repository/com/typesafe/config/1.4.2/config-1.4.2.jar:/workspace/m2-repository/io/netty/netty-handler/4.1.77.Final/netty-handler-4.1.77.Final.jar:/workspace/m2-repository/io/netty/netty-common/4.1.77.Final/netty-common-4.1.77.Final.jar:/workspace/m2-repository/io/netty/netty-resolver/4.1.77.Final/netty-resolver-4.1.77.Final.jar:/workspace/m2-repository/io/netty/netty-buffer/4.1.77.Final/netty-buffer-4.1.77.Final.jar:/workspace/m2-repository/io/netty/netty-transport/4.1.77.Final/netty-transport-4.1.77.Final.jar:/workspace/m2-repository/io/netty/netty-codec/4.1.77.Final/netty-codec-4.1.77.Final.jar:/workspace/m2-repository/io/netty/netty-codec-http/4.1.77.Final/netty-codec-http-4.1.77.Final.jar:/workspace/m2-repository/io/netty/netty-transport-native-epoll/4.1.77.Final/netty-transport-native-epoll-4.1.77.Final-linux-x86_64.jar:/workspace/m2-repository/io/netty/netty-transport-native-unix-common/4.1.77.Final/netty-transport-native-unix-common-4.1.77.Final.jar:/workspace/m2-repository/io/netty/netty-transport-classes-epoll/4.1.77.Final/netty-transport-classes-epoll-4.1.77.Final.jar:/workspace/m2-repository/ch/qos/logback/logback-classic/1.2.11/logback-classic-1.2.11.jar:/workspace/m2-repository/ch/qos/logback/logback-core/1.2.11/logback-core-1.2.11.jar:/workspace/m2-repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/workspace/m2-repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/workspace/m2-repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/workspace/m2-repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/workspace/m2-repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/workspace/m2-repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/workspace/m2-repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/workspace/m2-repository/io/jooby/jooby-test/2.15.1/jooby-test-2.15.1.jar:/workspace/m2-repository/com/squareup/okhttp3/okhttp/4.9.3/okhttp-4.9.3.jar:/workspace/m2-repository/com/squareup/okio/okio/2.8.0/okio-2.8.0.jar:/workspace/m2-repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.0/kotlin-stdlib-common-1.4.0.jar:/workspace/m2-repository/org/jetbrains/kotlin/kotlin-stdlib/1.6.21/kotlin-stdlib-1.6.21.jar:/workspace/m2-repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:"/>
     <property name="application.package" value="com.danielfireman.ifal.calcapi"/>
@@ -43,11 +35,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="jdk.vendor.version" value="Zulu11.56+19-CA"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-<<<<<<< HEAD
-    <property name="surefire.real.class.path" value="/workspace/gqso-924-2022/calculadora/api/target/surefire/surefirebooter2602715780436222308.jar"/>
-=======
-    <property name="surefire.real.class.path" value="/workspace/gqso-924-2022/calculadora/api/target/surefire/surefirebooter1147402679645080760.jar"/>
->>>>>>> main
+    <property name="surefire.real.class.path" value="/workspace/gqso-924-2022/calculadora/api/target/surefire/surefirebooter2259136955799507425.jar"/>
     <property name="logback.configurationFile" value="/workspace/gqso-924-2022/calculadora/api/conf/logback.xml"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.15+10-LTS"/>
@@ -66,11 +54,7 @@
     <property name="user.dir" value="/workspace/gqso-924-2022/calculadora/api"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-<<<<<<< HEAD
-    <property name="PID" value="2167"/>
-=======
-    <property name="PID" value="2931"/>
->>>>>>> main
+    <property name="PID" value="2283"/>
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
@@ -80,29 +64,16 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-<<<<<<< HEAD
-  <testcase name="shouldSayHi(int)" classname="com.danielfireman.ifal.calcapi.IntegrationTest" time="0.111">
-    <system-out><![CDATA[[2022-07-25 16:22:17,645]-[main] INFO  com.danielfireman.ifal.calcapi.App - App started with:
-[2022-07-25 16:22:17,648]-[main] INFO  com.danielfireman.ifal.calcapi.App -     PID: 2167
-[2022-07-25 16:22:17,648]-[main] INFO  com.danielfireman.ifal.calcapi.App -     netty {port: 8911, ioThreads: 32, workerThreads: 128, bufferSize: 16384, maxRequestSize: 10485760, httpsOnly: false}
-[2022-07-25 16:22:17,648]-[main] INFO  com.danielfireman.ifal.calcapi.App -     env: [test]
-[2022-07-25 16:22:17,648]-[main] INFO  com.danielfireman.ifal.calcapi.App -     execution mode: default
-[2022-07-25 16:22:17,648]-[main] INFO  com.danielfireman.ifal.calcapi.App -     user: gitpod
-[2022-07-25 16:22:17,648]-[main] INFO  com.danielfireman.ifal.calcapi.App -     app dir: /workspace/gqso-924-2022/calculadora/api
-[2022-07-25 16:22:17,648]-[main] INFO  com.danielfireman.ifal.calcapi.App -     tmp dir: /workspace/gqso-924-2022/calculadora/api/tmp
-[2022-07-25 16:22:17,648]-[main] INFO  com.danielfireman.ifal.calcapi.App - routes: 
-=======
-  <testcase name="shouldSayHi(int)" classname="com.danielfireman.ifal.calcapi.IntegrationTest" time="0.283">
-    <system-out><![CDATA[[2022-07-25 16:02:31,424]-[main] INFO  com.danielfireman.ifal.calcapi.App - App started with:
-[2022-07-25 16:02:31,428]-[main] INFO  com.danielfireman.ifal.calcapi.App -     PID: 2931
-[2022-07-25 16:02:31,428]-[main] INFO  com.danielfireman.ifal.calcapi.App -     netty {port: 8911, ioThreads: 32, workerThreads: 128, bufferSize: 16384, maxRequestSize: 10485760, httpsOnly: false}
-[2022-07-25 16:02:31,428]-[main] INFO  com.danielfireman.ifal.calcapi.App -     env: [test]
-[2022-07-25 16:02:31,429]-[main] INFO  com.danielfireman.ifal.calcapi.App -     execution mode: default
-[2022-07-25 16:02:31,429]-[main] INFO  com.danielfireman.ifal.calcapi.App -     user: gitpod
-[2022-07-25 16:02:31,429]-[main] INFO  com.danielfireman.ifal.calcapi.App -     app dir: /workspace/gqso-924-2022/calculadora/api
-[2022-07-25 16:02:31,429]-[main] INFO  com.danielfireman.ifal.calcapi.App -     tmp dir: /workspace/gqso-924-2022/calculadora/api/tmp
-[2022-07-25 16:02:31,429]-[main] INFO  com.danielfireman.ifal.calcapi.App - routes: 
->>>>>>> main
+  <testcase name="shouldSayHi(int)" classname="com.danielfireman.ifal.calcapi.IntegrationTest" time="0.156">
+    <system-out><![CDATA[[2022-07-26 16:21:17,016]-[main] INFO  com.danielfireman.ifal.calcapi.App - App started with:
+[2022-07-26 16:21:17,019]-[main] INFO  com.danielfireman.ifal.calcapi.App -     PID: 2283
+[2022-07-26 16:21:17,020]-[main] INFO  com.danielfireman.ifal.calcapi.App -     netty {port: 8911, ioThreads: 32, workerThreads: 128, bufferSize: 16384, maxRequestSize: 10485760, httpsOnly: false}
+[2022-07-26 16:21:17,020]-[main] INFO  com.danielfireman.ifal.calcapi.App -     env: [test]
+[2022-07-26 16:21:17,020]-[main] INFO  com.danielfireman.ifal.calcapi.App -     execution mode: default
+[2022-07-26 16:21:17,020]-[main] INFO  com.danielfireman.ifal.calcapi.App -     user: gitpod
+[2022-07-26 16:21:17,020]-[main] INFO  com.danielfireman.ifal.calcapi.App -     app dir: /workspace/gqso-924-2022/calculadora/api
+[2022-07-26 16:21:17,020]-[main] INFO  com.danielfireman.ifal.calcapi.App -     tmp dir: /workspace/gqso-924-2022/calculadora/api/tmp
+[2022-07-26 16:21:17,021]-[main] INFO  com.danielfireman.ifal.calcapi.App - routes: 
 
   GET /
   GET /soma/{op1}/{op2}
