@@ -60,4 +60,26 @@ public class IntegrationTest {
       assertEquals("1.0", rsp.body().string());
     }
   }
+  @Test
+  public void checarError (int serverPort) throws IOException {
+    Request req = new Request.Builder()
+        .url("http://localhost:" + serverPort + "/mult/a/a")
+        .build();
+
+    try (Response rsp = client.newCall(req).execute()) {
+      assertEquals(StatusCode.BAD_REQUEST_CODE, rsp.code());
+    }
+  }
+
+  @Test
+  public void checarSucesso(int serverPort) throws IOException {
+    Request req = new Request.Builder()
+        .url("http://localhost:" + serverPort + "/mult/5/5")
+        .build();
+
+    try (Response rsp = client.newCall(req).execute()) {
+      assertEquals(StatusCode.OK_CODE, rsp.code());
+      assertEquals("25.0", rsp.body().string());
+    }
+  }
 }
