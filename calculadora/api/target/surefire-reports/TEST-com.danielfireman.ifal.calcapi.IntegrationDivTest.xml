@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.danielfireman.ifal.calcapi.SubtracaoTest" time="0.059" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.danielfireman.ifal.calcapi.IntegrationDivTest" time="2.607" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="jooby.useShutdownHook" value="false"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -64,6 +64,47 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="subtracao" classname="com.danielfireman.ifal.calcapi.SubtracaoTest" time="0.004"/>
-  <testcase name="subtracao_operadorString" classname="com.danielfireman.ifal.calcapi.SubtracaoTest" time="0.052"/>
+  <testcase name="checError(int)" classname="com.danielfireman.ifal.calcapi.IntegrationDivTest" time="0.847">
+    <system-out><![CDATA[[2022-08-29 19:58:51,450]-[main] INFO  com.danielfireman.ifal.calcapi.App - App started with:
+[2022-08-29 19:58:51,456]-[main] INFO  com.danielfireman.ifal.calcapi.App -     PID: 2174
+[2022-08-29 19:58:51,456]-[main] INFO  com.danielfireman.ifal.calcapi.App -     netty {port: 8911, ioThreads: 32, workerThreads: 128, bufferSize: 16384, maxRequestSize: 10485760, httpsOnly: false}
+[2022-08-29 19:58:51,457]-[main] INFO  com.danielfireman.ifal.calcapi.App -     env: [test]
+[2022-08-29 19:58:51,457]-[main] INFO  com.danielfireman.ifal.calcapi.App -     execution mode: default
+[2022-08-29 19:58:51,457]-[main] INFO  com.danielfireman.ifal.calcapi.App -     user: gitpod
+[2022-08-29 19:58:51,457]-[main] INFO  com.danielfireman.ifal.calcapi.App -     app dir: /workspace/gqso-924-2022/calculadora/api
+[2022-08-29 19:58:51,457]-[main] INFO  com.danielfireman.ifal.calcapi.App -     tmp dir: /workspace/gqso-924-2022/calculadora/api/tmp
+[2022-08-29 19:58:51,458]-[main] INFO  com.danielfireman.ifal.calcapi.App - routes: 
+
+  GET /
+  GET /soma/{op1}/{op2}
+  GET /
+  GET /sub/{op1}/{op2}
+  GET /
+  GET /div/{op1}/{op2}
+  GET /
+  GET /mult/{op1}/{op2}
+  GET /
+
+listening on:
+  http://localhost:8911/
+
+[2022-08-29 19:58:52,546]-[worker-1-1] ERROR com.danielfireman.ifal.calcapi.App - GET /div/a/a 400 Bad Request
+io.jooby.exception.TypeMismatchException: Cannot convert value: 'op1', to: 'double'
+	at io.jooby.Value.doubleValue(Value.java:177)
+	at com.danielfireman.ifal.calcapi.Divisao$Module.getDivisao$op1$op2(com.danielfireman.ifal.calcapi.Divisao$Module.java)
+	at io.jooby.internal.handler.DefaultHandler.apply(DefaultHandler.java:23)
+	at io.jooby.internal.handler.WorkerHandler.lambda$apply$0(WorkerHandler.java:23)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.NumberFormatException: For input string: "a"
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:543)
+	at io.jooby.Value.doubleValue(Value.java:175)
+	... 7 common frames omitted
+]]></system-out>
+  </testcase>
+  <testcase name="checSucesso(int)" classname="com.danielfireman.ifal.calcapi.IntegrationDivTest" time="0.06"/>
 </testsuite>

@@ -52,29 +52,6 @@ public class IntegrationTest {
   }
 
   @Test
-  public void checError (int serverPort) throws IOException {
-    Request req = new Request.Builder()
-        .url("http://localhost:" + serverPort + "/div/a/a")
-        .build();
-
-    try (Response rsp = client.newCall(req).execute()) {
-      assertEquals(StatusCode.BAD_REQUEST_CODE, rsp.code());
-    }
-  }
-
-  @Test
-  public void checSucesso(int serverPort) throws IOException {
-    Request req = new Request.Builder()
-        .url("http://localhost:" + serverPort + "/div/10/10")
-        .build();
-
-    try (Response rsp = client.newCall(req).execute()) {
-      assertEquals(StatusCode.OK_CODE, rsp.code());
-      assertEquals("1.0", rsp.body().string());
-    }
-  }
-
-  @Test
   public void checarError (int serverPort) throws IOException {
     Request req = new Request.Builder()
         .url("http://localhost:" + serverPort + "/mult/a/a")
