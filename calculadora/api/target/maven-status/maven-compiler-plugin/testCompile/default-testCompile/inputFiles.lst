@@ -1,5 +1,6 @@
 /workspace/gqso-924-2022/calculadora/api/src/test/java/com/danielfireman/ifal/calcapi/IntegrationTest.java
 /workspace/gqso-924-2022/calculadora/api/src/test/java/com/danielfireman/ifal/calcapi/MultiplicacaoTest.java
+/workspace/gqso-924-2022/calculadora/api/src/test/java/com/danielfireman/ifal/calcapi/IntegrationSomTest.java
 /workspace/gqso-924-2022/calculadora/api/src/test/java/com/danielfireman/ifal/calcapi/DivisaoTest.java
 /workspace/gqso-924-2022/calculadora/api/src/test/java/com/danielfireman/ifal/calcapi/IntegrationMultTest.java
 /workspace/gqso-924-2022/calculadora/api/src/test/java/com/danielfireman/ifal/calcapi/UnitTest.java
