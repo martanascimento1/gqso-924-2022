@@ -2,7 +2,11 @@
 Test set: com.danielfireman.ifal.calcapi.IntegrationTest
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.072 s - in com.danielfireman.ifal.calcapi.IntegrationTest
 =======
 Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.08 s - in com.danielfireman.ifal.calcapi.IntegrationTest
+>>>>>>> main
+=======
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 s - in com.danielfireman.ifal.calcapi.IntegrationTest
 >>>>>>> main

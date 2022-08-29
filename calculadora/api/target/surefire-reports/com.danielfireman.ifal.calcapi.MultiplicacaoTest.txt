@@ -2,7 +2,11 @@
 Test set: com.danielfireman.ifal.calcapi.MultiplicacaoTest
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s - in com.danielfireman.ifal.calcapi.MultiplicacaoTest
 =======
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 s - in com.danielfireman.ifal.calcapi.MultiplicacaoTest
+>>>>>>> main
+=======
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s - in com.danielfireman.ifal.calcapi.MultiplicacaoTest
 >>>>>>> main

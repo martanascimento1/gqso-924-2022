@@ -29,9 +29,15 @@ public class IntegrationTest {
   }
 
   @Test
+<<<<<<< HEAD
   public void checError (int serverPort) throws IOException {
     Request req = new Request.Builder()
         .url("http://localhost:" + serverPort + "/div/a/a")
+=======
+  public void checarError (int serverPort) throws IOException {
+    Request req = new Request.Builder()
+        .url("http://localhost:" + serverPort + "/mult/a/a")
+>>>>>>> main
         .build();
 
     try (Response rsp = client.newCall(req).execute()) {
@@ -40,13 +46,20 @@ public class IntegrationTest {
   }
 
   @Test
+<<<<<<< HEAD
   public void checSucesso(int serverPort) throws IOException {
     Request req = new Request.Builder()
         .url("http://localhost:" + serverPort + "/div/10/10")
+=======
+  public void checarSucesso(int serverPort) throws IOException {
+    Request req = new Request.Builder()
+        .url("http://localhost:" + serverPort + "/mult/5/5")
+>>>>>>> main
         .build();
 
     try (Response rsp = client.newCall(req).execute()) {
       assertEquals(StatusCode.OK_CODE, rsp.code());
+<<<<<<< HEAD
       assertEquals("1.0", rsp.body().string());
     }
   }
@@ -71,6 +84,9 @@ public class IntegrationTest {
     try (Response rsp = client.newCall(req).execute()) {
       assertEquals(StatusCode.OK_CODE, rsp.code());
       assertEquals("5.0", rsp.body().string());
+=======
+      assertEquals("25.0", rsp.body().string());
+>>>>>>> main
     }
   }
 
