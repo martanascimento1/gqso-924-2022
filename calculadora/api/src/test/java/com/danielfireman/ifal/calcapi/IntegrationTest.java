@@ -17,6 +17,18 @@ public class IntegrationTest {
   static OkHttpClient client = new OkHttpClient();
 
   @Test
+  public void shouldSayHi(int serverPort) throws IOException {
+    Request req = new Request.Builder()
+        .url("http://localhost:" + serverPort)
+        .build();
+
+    try (Response rsp = client.newCall(req).execute()) {
+      assertEquals("Calculadora API", rsp.body().string());
+      assertEquals(StatusCode.OK.value(), rsp.code());
+    }
+  }
+
+  @Test
   public void checaErro(int serverPort) throws IOException {
     Request req = new Request.Builder()
         .url("http://localhost:" + serverPort + "/soma/a/a")
@@ -38,6 +50,7 @@ public class IntegrationTest {
       assertEquals("20.0", rsp.body().string());
     }
   }
+
   @Test
   public void checError (int serverPort) throws IOException {
     Request req = new Request.Builder()
@@ -60,6 +73,7 @@ public class IntegrationTest {
       assertEquals("1.0", rsp.body().string());
     }
   }
+
   @Test
   public void checarError (int serverPort) throws IOException {
     Request req = new Request.Builder()
@@ -82,6 +96,7 @@ public class IntegrationTest {
       assertEquals("25.0", rsp.body().string());
     }
   }
+
   @Test
   public void checarErr (int serverPort) throws IOException {
     Request req = new Request.Builder()
@@ -104,4 +119,5 @@ public class IntegrationTest {
       assertEquals("5.0", rsp.body().string());
     }
   }
+
 }
