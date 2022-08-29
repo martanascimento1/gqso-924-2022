@@ -12,26 +12,14 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @JoobyTest(App.class)
-public class IntegrationTest {
+public class IntegrationSubTest {
 
   static OkHttpClient client = new OkHttpClient();
 
   @Test
-  public void shouldSayHi(int serverPort) throws IOException {
+  public void checarErro (int serverPort) throws IOException {
     Request req = new Request.Builder()
-        .url("http://localhost:" + serverPort)
-        .build();
-
-    try (Response rsp = client.newCall(req).execute()) {
-      assertEquals("Calculadora API", rsp.body().string());
-      assertEquals(StatusCode.OK.value(), rsp.code());
-    }
-  }
-
-  @Test
-  public void checarError (int serverPort) throws IOException {
-    Request req = new Request.Builder()
-        .url("http://localhost:" + serverPort + "/mult/a/a")
+        .url("http://localhost:" + serverPort + "/sub/a/a")
         .build();
 
     try (Response rsp = client.newCall(req).execute()) {
@@ -42,13 +30,12 @@ public class IntegrationTest {
   @Test
   public void checarSucesso(int serverPort) throws IOException {
     Request req = new Request.Builder()
-        .url("http://localhost:" + serverPort + "/mult/5/5")
+        .url("http://localhost:" + serverPort + "/sub/6/1")
         .build();
 
     try (Response rsp = client.newCall(req).execute()) {
       assertEquals(StatusCode.OK_CODE, rsp.code());
-      assertEquals("25.0", rsp.body().string());
+      assertEquals("5.0", rsp.body().string());
     }
   }
-
 }
